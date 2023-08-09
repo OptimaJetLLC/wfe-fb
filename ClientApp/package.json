@@ -13,7 +13,7 @@
     "rimraf": "^5.0.0",
     "semantic-ui-react": "0.87.3",
     "draft-js": "0.11.3",
-    "moment": "2.25.3",
+    "moment": "2.29.4",
     "clone": "2.1.2",
     "reflux": "6.4.1",
     "react-grid-layout": "0.16.6",
