@@ -1,0 +1,37 @@
+<Process Name="WorkflowSchema" CanBeInlined="false" Tags="" LogEnabled="false">
+  <Designer />
+  <Commands>
+    <Command Name="Finish" />
+  </Commands>
+  <Activities>
+    <Activity Name="InitialActivity" State="InitialActivity" IsInitial="true" IsFinal="false" IsForSetState="true" IsAutoSchemeUpdate="true">
+      <Designer X="500" Y="290" Hidden="false" />
+    </Activity>
+    <Activity Name="FinalActivity" State="FinalActivity" IsInitial="false" IsFinal="true" IsForSetState="true" IsAutoSchemeUpdate="true">
+      <Designer X="1040" Y="280" Hidden="false" />
+    </Activity>
+    <Activity Name="Activity" State="Activity" IsInitial="false" IsFinal="false" IsForSetState="true" IsAutoSchemeUpdate="true">
+      <Designer X="770" Y="280" Hidden="false" />
+    </Activity>
+  </Activities>
+  <Transitions>
+    <Transition Name="InitialActivity_Activity_1" To="Activity" From="InitialActivity" Classifier="NotSpecified" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" DisableParentStateControl="false">
+      <Triggers>
+        <Trigger Type="Auto" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Hidden="false" />
+    </Transition>
+    <Transition Name="Activity_FinalActivity_1" To="FinalActivity" From="Activity" Classifier="NotSpecified" AllowConcatenationType="And" RestrictConcatenationType="And" ConditionsConcatenationType="And" DisableParentStateControl="false">
+      <Triggers>
+        <Trigger Type="Command" NameRef="Finish" />
+      </Triggers>
+      <Conditions>
+        <Condition Type="Always" />
+      </Conditions>
+      <Designer Hidden="false" />
+    </Transition>
+  </Transitions>
+</Process>

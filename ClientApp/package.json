@@ -1,0 +1,63 @@
+{
+  "name": "sample",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "http-proxy-middleware": "^2.0.6",
+    "jquery": "^3.6.4",
+    "merge": "^2.1.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^6.11.0",
+    "react-scripts": "^4.0.3",
+    "rimraf": "^5.0.0",
+    "semantic-ui-react": "0.87.3",
+    "draft-js": "0.11.3",
+    "moment": "2.25.3",
+    "clone": "2.1.2",
+    "reflux": "6.4.1",
+    "react-grid-layout": "0.16.6",
+    "react-data-grid": "4.0.9",
+    "draft-convert": "2.1.8",
+    "numeral": "2.0.6",
+    "react-datepicker": "1.6.0",
+    "react-dropzone-component": "3.2.0",
+    "react-number-format": "4.3.1",
+    "react-slick": "0.25.2",
+    "react-fast-compare": "3.0.2"
+  },
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "cross-env": "^7.0.3",
+    "nan": "^2.17.0",
+    "typescript": "^4.9.5"
+  },
+  "overrides": {
+    "nth-check": "2.1.1"
+  },
+  "scripts": {
+    "prestart": "node aspnetcore-https && node aspnetcore-react",
+    "start": "rimraf ./build &&  react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env CI=true react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

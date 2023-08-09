@@ -1,0 +1,108 @@
+[
+  {
+    "key": "container_4",
+    "data-buildertype": "container",
+    "children": [
+      {
+        "key": "breadcrumb_1",
+        "data-buildertype": "breadcrumb",
+        "items": [
+          {
+            "text": "Document list",
+            "url": "back"
+          },
+          {
+            "divider": "right angle",
+            "text": "Document",
+            "active": true
+          }
+        ],
+        "events": {
+          "onItemClick": {
+            "active": true,
+            "actions": [
+              "redirect"
+            ]
+          }
+        },
+        "style-marginBottom": ""
+      }
+    ],
+    "style-marginTop": "30px",
+    "style-marginBottom": "15px",
+    "style-hiddeninprint": true
+  },
+  {
+    "key": "header_1",
+    "data-buildertype": "header",
+    "content": "Application Form",
+    "size": "medium",
+    "subheader": "Make it easier",
+    "textAlign": "center"
+  },
+  {
+    "key": "form_1",
+    "data-buildertype": "form",
+    "children": [
+      {
+        "key": "title",
+        "data-buildertype": "input",
+        "label": "Title",
+        "fluid": true,
+        "other-required": false
+      },
+      {
+        "key": "formgroup_1",
+        "data-buildertype": "formgroup",
+        "widths": "equal",
+        "children": [
+          {
+            "key": "firstName",
+            "data-buildertype": "input",
+            "label": "First name",
+            "fluid": true
+          },
+          {
+            "key": "lastName",
+            "data-buildertype": "input",
+            "label": "Last name",
+            "fluid": true
+          }
+        ]
+      },
+      {
+        "key": "type",
+        "data-buildertype": "dropdown",
+        "label": "Type",
+        "fluid": true,
+        "selection": true,
+        "data-elements": "[{key: 0, value: '', text: ''},\n{key: 1, value: 1, text: 'Internal'},\n{key: 2, value: 2, text: 'External'},\n{key: 3, value: 2, text: 'Direct'}]",
+        "placeholder": ""
+      },
+      {
+        "key": "comment",
+        "data-buildertype": "textarea",
+        "label": "Comment",
+        "fluid": true,
+        "rows": 5
+      }
+    ],
+    "events": {},
+    "style-marginBottom": "10px"
+  },
+  {
+    "key": "btnSave",
+    "data-buildertype": "button",
+    "content": "Save",
+    "primary": true,
+    "fluid": false,
+    "events": {
+      "onClick": {
+        "active": true,
+        "actions": [
+          "save"
+        ]
+      }
+    }
+  }
+]

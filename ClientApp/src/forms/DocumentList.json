@@ -1,0 +1,216 @@
+[
+  {
+    "key": "container_4",
+    "data-buildertype": "container",
+    "children": [
+      {
+        "key": "breadcrumb_1",
+        "data-buildertype": "breadcrumb",
+        "items": [
+          {
+            "text": "Document list",
+            "url": "back"
+          }
+        ],
+        "style-marginBottom": ""
+      }
+    ],
+    "style-marginTop": "30px",
+    "style-marginBottom": "15px",
+    "style-hiddeninprint": true
+  },
+  {
+    "key": "repeater-buttons",
+    "data-buildertype": "container",
+    "children": [
+      {
+        "key": "buttonbar",
+        "data-buildertype": "container",
+        "style-float": "",
+        "children": [
+          {
+            "key": "btnCreate",
+            "data-buildertype": "button",
+            "content": "Create",
+            "style-customcss": "",
+            "primary": true,
+            "events-onClick": true,
+            "events-onClick-actions": [
+              "gridAdd"
+            ],
+            "events": {
+              "onClick": {
+                "active": true,
+                "actions": [
+                  "gridAdd"
+                ],
+                "targets": []
+              }
+            },
+            "link": false
+          },
+          {
+            "key": "btnDelete",
+            "data-buildertype": "button",
+            "content": "Delete",
+            "style-customcss": "",
+            "secondary": true,
+            "events": {
+              "onClick": {
+                "actions": [
+                  "gridDelete"
+                ],
+                "active": true,
+                "targets": [
+                  "grid"
+                ],
+                "parameters": []
+              }
+            },
+            "style-adaptive": true,
+            "style-renderwhen": "desktop"
+          },
+          {
+            "key": "btnRefresh",
+            "data-buildertype": "button",
+            "content": "Refresh",
+            "style-customcss": "",
+            "secondary": true,
+            "events": {
+              "onClick": {
+                "actions": [
+                  "gridRefresh"
+                ],
+                "active": true,
+                "targets": [
+                  "grid"
+                ],
+                "parameters": []
+              }
+            },
+            "style-adaptive": true,
+            "style-renderwhen": "desktop"
+          }
+        ],
+        "style-marginRight": "20px",
+        "style-display": "flex"
+      }
+    ],
+    "style-display": "flex",
+    "style-marginBottom": "10px"
+  },
+  {
+    "key": "grid",
+    "data-buildertype": "gridview",
+    "columns": [
+      {
+        "key": "id",
+        "name": "Id",
+        "sortable": true,
+        "filterable": false,
+        "resizable": true,
+        "width": 300
+      },
+      {
+        "key": "schemeId",
+        "name": "Scheme",
+        "sortable": true,
+        "filterable": false,
+        "resizable": true,
+        "width": 300
+      },
+      {
+        "key": "stateName",
+        "name": "State",
+        "sortable": true,
+        "filterable": false,
+        "resizable": true,
+        "type": "custom",
+        "width": 200
+      },
+      {
+        "key": "activityName",
+        "name": "Activity",
+        "sortable": true,
+        "filterable": false,
+        "resizable": true,
+        "width": 200
+      },
+      {
+        "key": "creationDate",
+        "name": "Creation Date",
+        "sortable": true,
+        "filterable": false,
+        "resizable": true,
+        "type": "datetime",
+        "width": 150
+      },
+      {
+        "key": "lastTransitionDate",
+        "name": "Modification Date",
+        "sortable": true,
+        "filterable": false,
+        "resizable": true,
+        "type": "datetime",
+        "width": 150
+      }
+    ],
+    "style-marginTop": "",
+    "rowKey": "Id",
+    "editForm": "Document",
+    "resizecolumns": true,
+    "autoHeight": true,
+    "filterRow": false,
+    "multiselect": true,
+    "events-onRowClick-actions": [],
+    "events-onRowDblClick-actions": [
+      "gridEdit"
+    ],
+    "events-onRowDblClick": true,
+    "events": {
+      "onRowDblClick": {
+        "active": true,
+        "actions": [
+          "gridEdit"
+        ],
+        "targets": [],
+        "parameters": []
+      },
+      "onRowClick": {
+        "active": false,
+        "actions": [
+          "gridEdit"
+        ],
+        "targets": [],
+        "parameters": []
+      },
+      "onModalClosed": {
+        "active": true,
+        "actions": [
+          "gridRefresh"
+        ],
+        "targets": [],
+        "parameters": []
+      }
+    },
+    "defaultSort": "Number DESC",
+    "style-width": "",
+    "style-height": "",
+    "minHeight": "",
+    "offSet": "240px",
+    "editFormShowType": "sidebar",
+    "style-adaptive": true,
+    "style-renderwhen": "desktop",
+    "propertyName": "",
+    "placeholders": {
+      "stateName": [
+        {
+          "key": "staticcontent_2",
+          "data-buildertype": "staticcontent",
+          "content": "<a>{row.stateName}</a>",
+          "isHtml": true
+        }
+      ]
+    }
+  }
+]
